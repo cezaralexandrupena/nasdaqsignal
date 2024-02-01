@@ -1,6 +1,6 @@
 asgiref==3.6.0
 attr==0.3.2
-BeautifulSoup==3.2.2
+BeautifulSoup==4.12.3
 brotli==1.1.0
 brotlicffi==1.1.0.0
 cchardet==2.1.7
