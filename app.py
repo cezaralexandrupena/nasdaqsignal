@@ -77,5 +77,3 @@ def gather_api():
             else:
                 continue
         return jsonify({"respose":"Ticker not found..."})
-
-app.run(debug=True)
