@@ -26,7 +26,7 @@ def gather(ticker, assetClass):
         # URL: Specific NASDAQ endpoint that provides the option chain of a given stock with certain filters applied.
         url = f"https://api.nasdaq.com/api/quote/{ticker.lower()}/option-chain?assetclass={assetClass.lower()}&limit=300&fromdate=all&todate=undefined&excode=oprac&callput=call&money=out&type=all"
         r = s.get(url)
-
+        print(s.get(url))
 
         try:
             json_obj = json.loads(r.content)
@@ -67,6 +67,7 @@ def gather_api():
     with open('modifiedTickers.csv', newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in spamreader:
+            print(row)
             rowString = ', '.join(row)
             array = rowString.split(",")
             ticker = array[1]
