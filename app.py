@@ -21,6 +21,7 @@ def gather(ticker, assetClass):
         return "Unavailable ticker..."
     else:
         # Chromium session initialization, a browser that runs in background to load the URL provided. It has to be closed once the needed data is retrieved.
+        print(HTMLSession())
         s = HTMLSession()
 
         # URL: Specific NASDAQ endpoint that provides the option chain of a given stock with certain filters applied.
