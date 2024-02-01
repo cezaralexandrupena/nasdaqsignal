@@ -59,7 +59,7 @@ def gather(ticker, assetClass):
             return "Options not available..."                                       
 
 app = Flask(__name__)
-
+app.debug = True
 @app.route("/gather",methods=["GET"])
 def gather_api():
     requestTicker = request.args.get('ticker')
